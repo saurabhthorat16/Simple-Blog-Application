@@ -62,3 +62,13 @@ def signup(request):
     else:
         form = UserCreationForm()
     return render(request, 'registration/signup.html', {'form': form})
+#--------not used
+def home1(request):
+    posts = Post.objects.all().order_by('-created_at')
+    return render(request, 'blog/home.html', {'posts': posts})
+
+
+def home2(request):
+    posts = Post.objects.all().order_by('-created_at')
+    return {}
+    return render(request, 'blog/home.html', {'posts': posts})
