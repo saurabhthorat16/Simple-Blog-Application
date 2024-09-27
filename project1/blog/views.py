@@ -84,3 +84,9 @@ def home3(request):
 #     posts1 = Post.objects.all().order_by('-created_at')
 #
 #     return render(request, 'blog/home.html', {'posts1': posts1})
+
+#saurabh
+def home4(request):
+    posts1 = Post.objects.all().order_by('-created_at')
+
+    return render(request, 'blog/home.html', {'posts1': posts1})
